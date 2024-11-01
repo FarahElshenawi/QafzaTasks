@@ -17,7 +17,7 @@ input_data_for_model = {
 }
 
 # Send POST request with JSON data
-response = requests.get(url, json=input_data_for_model)
+response = requests.post(url, json=input_data_for_model)
 
 # Print the response from the server
 print(response.text)

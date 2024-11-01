@@ -8,6 +8,9 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+# Load the model
+model = pickle.load(open('D:\MLOps\diabetes_prediction_project\data\diabetes_model.sav', 'rb'))
+
 class InputData(BaseModel):
     Pregnancies: int
     Glucose: int
@@ -23,10 +26,8 @@ async def welcome():
     return {"Hello, Here you can predict diabetes 'http://127.0.0.1:8000/predict'"}
 
 
-# Load the model
-model = pickle.load(open('D:\MLOps\diabetes_prediction_project\data\diabetes_model.sav', 'rb'))
 
-@app.get('/diabetes_prediction')
+@app.post('/diabetes_prediction')
 async def diabetes_pred(input_parameters: InputData):
     # Convert the input to JSON format
     input_data_json = input_parameters.model_dump_json()
