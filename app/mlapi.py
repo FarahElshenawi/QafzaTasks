@@ -61,7 +61,7 @@ class DiabetesPredictor:
 
 
 app = FastAPI()
-predictor = DiabetesPredictor('D:\\MLOps\\diabetes_prediction_project\\data\\diabetes_model.sav')
+predictor = DiabetesPredictor("data/diabetes_model.sav")
 
 
 @app.get("/")

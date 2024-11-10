@@ -1,0 +1,8 @@
+Create an image
+    1- OS -Ubuntu
+    2- update apt repo
+    3- install dependencies using apt
+    4- install python dependencies using pip
+    5- copy source code to /opt folder
+    6- Run 
+    
