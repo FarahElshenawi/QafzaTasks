@@ -1,5 +1,5 @@
 Create an image
-    1- OS -Ubuntu
+    1- OS -Ubuntu or python (base image)
     2- update apt repo
     3- install dependencies using apt
     4- install python dependencies using pip
